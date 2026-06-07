@@ -1,0 +1,89 @@
+VOID GetTimeInMsec (UINT4 *puGetTime)
+{
+	struct timespec ts;
+	clock_gettime(CLOCK_MONOTONIC, &ts);
+	*puGetTime = (UINT4)(ts.tv_sec * 1000 + ts.tv_nsec / 1000000);
+	return;
+}
+
+
+for(int i = 1 ; i < 101 ; i++)
+{
+	printf("Trying for the %d time to execute the command\n", i);
+	cmp_execute();
+	OsixDelay(5, OSIX_SECONDS);
+}
+		
+cmp_execute()
+{
+
+    GetTimeInMsec(&msec1);
+    //
+	//
+	//
+	Build CMP command
+	//
+	//
+	//
+    GetTimeInMsec(&msec2);
+	
+	mdiff = msec2 - msec1;
+    if (mdiff == 0)
+    mdiff = 1;
+    printf("CMP build command time: %u ms\n", mdiff);
+	
+	
+	cmp_main(argc, cmpArgs);
+	printf("CMP command executed successfully\n");
+}
+	
+cmp_main(argc, cmpArgs);
+{
+	GetTimeInMsec(&msec1);
+	
+	//
+	//
+	// 
+	Parse CMP command and SSL Context Setup
+	//
+	//
+	//		
+	GetTimeInMsec(&msec2);
+
+	mdiff = msec2 - msec1;
+	if (mdiff == 0)
+		mdiff = 1;
+
+	printf("CMP parsing command time: %u ms\n", mdiff);
+	
+	//
+	//
+	//
+	Network I/O and TLS Handshake
+	//
+	//
+	//
+	GetTimeInMsec(&msec3);
+	mdiff = msec3 - msec2;
+	if (mdiff == 0)
+	mdiff = 1;
+	printf("CMP network time: %u ms\n", mdiff);
+	
+	
+	//
+	//
+	//
+	Certificate Storage to Flash
+	//
+	//
+	//
+	
+	GetTimeInMsec(&msec4);
+	mdiff = msec4 - msec3;
+	if (mdiff == 0)
+	mdiff = 1;
+
+	printf("CMP saving certificate to flash: %u ms\n", mdiff);
+}
+	
+	

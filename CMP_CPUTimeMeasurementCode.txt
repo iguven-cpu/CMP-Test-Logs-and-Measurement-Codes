@@ -1,0 +1,376 @@
+#include <stdio.h>
+#include <stdint.h>
+#include <string.h>
+#include <time.h>
+#include <sys/resource.h>
+#include <math.h>
+
+/* =========================
+   CONFIG
+========================= */
+
+#define MAX_SAMPLES 1000
+#define GROUPS 2
+
+/* =========================
+   TIME
+========================= */
+
+static inline uint64_t now_ns()
+{
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return (uint64_t)ts.tv_sec * 1000000000ULL + ts.tv_nsec;
+}
+
+/* =========================
+   /PROC STAT
+========================= */
+
+typedef struct {
+    uint64_t user, nice, system, idle, iowait, irq, softirq, steal;
+} cpu_stat_t;
+
+static int read_cpu_stat(cpu_stat_t *c)
+{
+    FILE *f = fopen("/proc/stat", "r");
+    if (!f) return -1;
+
+    char line[256];
+    fgets(line, sizeof(line), f);
+    fclose(f);
+
+    sscanf(line, "cpu  %lu %lu %lu %lu %lu %lu %lu %lu",
+           &c->user, &c->nice, &c->system, &c->idle,
+           &c->iowait, &c->irq, &c->softirq, &c->steal);
+
+    return 0;
+}
+
+static uint64_t cpu_total(cpu_stat_t *c)
+{
+    return c->user + c->nice + c->system + c->idle +
+           c->iowait + c->irq + c->softirq + c->steal;
+}
+
+static uint64_t cpu_work(cpu_stat_t *c)
+{
+    return c->user + c->nice + c->system +
+           c->irq + c->softirq + c->steal;
+}
+
+/* =========================
+   RING BUFFER SAMPLE
+========================= */
+
+typedef struct {
+    double exec_ms;
+    double cpu_util;
+} sample_t;
+
+typedef struct {
+    sample_t buf[MAX_SAMPLES];
+    int head;
+    int count;
+} ring_buffer_t;
+
+static ring_buffer_t RB;
+
+static void ring_push(sample_t *s)
+{
+    RB.buf[RB.head] = *s;
+    RB.head = (RB.head + 1) % MAX_SAMPLES;
+    if (RB.count < MAX_SAMPLES) RB.count++;
+}
+
+/* =========================
+   CPU SNAPSHOT
+========================= */
+
+typedef struct {
+    struct rusage ru_start;
+    cpu_stat_t cpu_start;
+} cpu_snap_t;
+
+typedef struct {
+    double user_ms;
+    double kernel_ms;
+    double cpu_util;
+} cpu_result_t;
+
+static cpu_snap_t cpu_start_snap[GROUPS];
+static cpu_result_t cpu_result[GROUPS];
+
+/* =========================
+   WALL TIME SNAPSHOT
+========================= */
+
+typedef struct {
+    uint64_t start_ns;
+} wall_snap_t;
+
+static wall_snap_t wall_snap[GROUPS];
+
+/* =========================
+   START / END CPU
+========================= */
+
+static void cpu_start(int g)
+{
+    getrusage(RUSAGE_SELF, &cpu_start_snap[g].ru_start);
+    read_cpu_stat(&cpu_start_snap[g].cpu_start);
+}
+
+static void cpu_end(int g)
+{
+    struct rusage ru_end;
+    cpu_stat_t cpu_end_stat;
+
+    getrusage(RUSAGE_SELF, &ru_end);
+    read_cpu_stat(&cpu_end_stat);
+
+    cpu_result[g].user_ms =
+        (ru_end.ru_utime.tv_sec - cpu_start_snap[g].ru_start.ru_utime.tv_sec) * 1000.0 +
+        (ru_end.ru_utime.tv_usec - cpu_start_snap[g].ru_start.ru_utime.tv_usec) / 1000.0;
+
+    cpu_result[g].kernel_ms =
+        (ru_end.ru_stime.tv_sec - cpu_start_snap[g].ru_start.ru_stime.tv_sec) * 1000.0 +
+        (ru_end.ru_stime.tv_usec - cpu_start_snap[g].ru_start.ru_stime.tv_usec) / 1000.0;
+
+    uint64_t work_d =
+        cpu_work(&cpu_end_stat) - cpu_work(&cpu_start_snap[g].cpu_start);
+
+    uint64_t total_d =
+        cpu_total(&cpu_end_stat) - cpu_total(&cpu_start_snap[g].cpu_start);
+
+    cpu_result[g].cpu_util =
+        (total_d > 0) ? (100.0 * (double)work_d / (double)total_d) : 0.0;
+}
+
+/* =========================
+   START / END WALL
+========================= */
+
+static void wall_start(int g)
+{
+    wall_snap[g].start_ns = now_ns();
+}
+
+static double wall_end(int g)
+{
+    uint64_t end = now_ns();
+    return (double)(end - wall_snap[g].start_ns) / 1e6;
+}
+
+/* =========================
+   STATS (percentile helper)
+========================= */
+
+static int cmp_double(const void *a, const void *b)
+{
+    const double *x = (const double *)a;
+    const double *y = (const double *)b;
+
+    if (*x < *y) return -1;
+    if (*x > *y) return 1;
+    return 0;
+}
+
+static double percentile(double *a, int n, double p)
+{
+    if (n <= 0) return 0.0;
+    int idx = (int)((p / 100.0) * (n - 1));
+    return a[idx];
+}
+
+/* =========================
+   STAGE METRICS
+========================= */
+
+typedef struct {
+    double wall_ms;
+
+    double user_ms;
+    double kernel_ms;
+    double cpu_util;
+
+    double p50;
+    double p95;
+    double p99;
+} stage_metrics_t;
+
+static stage_metrics_t stage[GROUPS];
+
+/* =========================
+   START / END API
+========================= */
+
+void stage_start(int g)
+{
+    wall_start(g);
+    cpu_start(g);
+}
+
+void stage_end(int g)
+{
+    /* wall */
+    stage[g].wall_ms = wall_end(g);
+
+    /* cpu */
+    cpu_end(g);
+
+    stage[g].user_ms   = cpu_result[g].user_ms;
+    stage[g].kernel_ms = cpu_result[g].kernel_ms;
+    stage[g].cpu_util  = cpu_result[g].cpu_util;
+
+    /* percentile from ring buffer */
+    double tmp[MAX_SAMPLES];
+
+    for (int i = 0; i < RB.count; i++)
+        tmp[i] = RB.buf[i].exec_ms;
+
+    qsort(tmp, RB.count, sizeof(double), cmp_double);
+
+    stage[g].p50 = percentile(tmp, RB.count, 50);
+    stage[g].p95 = percentile(tmp, RB.count, 95);
+    stage[g].p99 = percentile(tmp, RB.count, 99);
+
+    /* store sample */
+    sample_t s = {
+        .exec_ms = stage[g].wall_ms,
+        .cpu_util = stage[g].cpu_util
+    };
+    ring_push(&s);
+}
+
+/* =========================
+   PRINT REPORT
+========================= */
+
+static void print_report_full()
+{
+    const char *name[2] = {
+        "CMD (build + parse)",
+        "IO (SSL + flash)"
+    };
+
+    printf("\n====================================================\n");
+    printf("CMP FULL PERFORMANCE REPORT\n");
+    printf("====================================================\n");
+
+    printf("Ring buffer samples: %d / %d\n", RB.count, MAX_SAMPLES);
+
+    for (int i = 0; i < 2; i++) {
+
+        printf("\n----------------------------------------------------\n");
+        printf("STAGE: %s\n", name[i]);
+        printf("----------------------------------------------------\n");
+
+        /* ================= WALL TIME ================= */
+        printf("\n[Wall Time]\n");
+        printf("  Total latency : %.3f ms\n", stage[i].wall_ms);
+
+        /* ================= CPU TIME ================= */
+        printf("\n[CPU Time]\n");
+        printf("  User CPU      : %.3f ms\n", stage[i].user_ms);
+        printf("  Kernel CPU    : %.3f ms\n", stage[i].kernel_ms);
+        printf("  Total CPU     : %.3f ms\n",
+               stage[i].user_ms + stage[i].kernel_ms);
+
+        /* ================= UTILIZATION ================= */
+        printf("\n[CPU Utilization]\n");
+        printf("  CPU util      : %.2f %%\n", stage[i].cpu_util);
+
+        double total_cpu = stage[i].user_ms + stage[i].kernel_ms;
+
+        if (stage[i].wall_ms > 0) {
+            double eff = (total_cpu / stage[i].wall_ms) * 100.0;
+            printf("  CPU/Wall eff  : %.2f %%\n", eff);
+        }
+
+        /* ================= LATENCY DISTRIBUTION ================= */
+        printf("\n[Latency Distribution]\n");
+        printf("  p50           : %.3f ms\n", stage[i].p50);
+        printf("  p95           : %.3f ms\n", stage[i].p95);
+        printf("  p99           : %.3f ms\n", stage[i].p99);
+
+        printf("  whisker range : [%.3f - %.3f] ms\n",
+               stage[i].p50, stage[i].p99);
+
+        /* ================= INTERPRETATION ================= */
+        printf("\n[Interpretation]\n");
+
+        if (stage[i].cpu_util > 80.0) {
+            printf("  -> CPU bound stage\n");
+        } else if (stage[i].cpu_util < 30.0) {
+            printf("  -> IO bound stage\n");
+        } else {
+            printf("  -> Mixed workload\n");
+        }
+
+        if (stage[i].wall_ms > total_cpu * 2) {
+            printf("  -> High blocking / waiting detected\n");
+        }
+
+        printf("\n");
+    }
+
+    printf("====================================================\n");
+}
+
+
+for(int i = 1 ; i < 101 ; i++)
+{
+	printf("Trying for the %d time to execute the command\n", i);
+	cmp_execute();
+	OsixDelay(5, OSIX_SECONDS);
+}
+
+cmp_execute()
+{
+
+    stage_start(0);
+    //
+	//
+	//
+	Build CMP command
+	//
+	//
+	//
+	
+	cmp_main(argc, cmpArgs);
+	printf("CMP command executed successfully\n");
+    print_report_full();
+}
+	
+cmp_main(argc, cmpArgs);
+{	
+	//
+	//
+	// 
+	Parse CMP command and SSL Context Setup
+	//
+	//
+	//		
+	stage_end(0);
+	
+	
+	stage_start(1);
+	//
+	//
+	//
+	Network I/O and TLS Handshake
+	//
+	//
+	//
+	
+	
+	//
+	//
+	//
+	Certificate Storage to Flash
+	//
+	//
+	//
+	stage_end(1);
+}

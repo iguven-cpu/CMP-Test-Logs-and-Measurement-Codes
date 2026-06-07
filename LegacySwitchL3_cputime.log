@@ -1,0 +1,6051 @@
+Trying for the 1 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 2 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 123.777 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 80.000 ms
+
+[CPU Utilization]
+  CPU util      : 100.00 %
+  CPU/Wall eff  : 64.63 %
+
+[Latency Distribution]
+  p50           : 0.000 ms
+  p95           : 0.000 ms
+  p99           : 0.000 ms
+  whisker range : [0.000 - 0.000] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2364.618 ms
+
+[CPU Time]
+  User CPU      : 1970.000 ms
+  Kernel CPU    : 200.000 ms
+  Total CPU     : 2170.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.73 %
+  CPU/Wall eff  : 91.77 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 123.777 ms
+  p99           : 123.777 ms
+  whisker range : [123.777 - 123.777] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 2 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 4 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 62.290 ms
+
+[CPU Time]
+  User CPU      : 0.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 10.000 ms
+
+[CPU Utilization]
+  CPU util      : 65.19 %
+  CPU/Wall eff  : 16.05 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 123.777 ms
+  p99           : 123.777 ms
+  whisker range : [123.777 - 123.777] ms
+
+[Interpretation]
+  -> Mixed workload
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1473.812 ms
+
+[CPU Time]
+  User CPU      : 1250.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1270.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 86.17 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 123.777 ms
+  p99           : 123.777 ms
+  whisker range : [123.777 - 123.777] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 3 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 6 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 67.062 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 14.71 %
+  CPU/Wall eff  : 29.82 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1473.812 ms
+  p99           : 1473.812 ms
+  whisker range : [123.777 - 1473.812] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1520.131 ms
+
+[CPU Time]
+  User CPU      : 1290.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1330.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.73 %
+  CPU/Wall eff  : 87.49 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1473.812 ms
+  p99           : 1473.812 ms
+  whisker range : [123.777 - 1473.812] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 4 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 8 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.418 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 37.59 %
+  CPU/Wall eff  : 45.86 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> Mixed workload
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1458.811 ms
+
+[CPU Time]
+  User CPU      : 1250.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1260.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 86.37 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 5 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 10 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.963 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 34.05 %
+  CPU/Wall eff  : 44.80 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> Mixed workload
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1499.029 ms
+
+[CPU Time]
+  User CPU      : 1260.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 85.39 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 6 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 12 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.968 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 3513.15 %
+  CPU/Wall eff  : 75.79 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1523.395 ms
+
+[CPU Time]
+  User CPU      : 1310.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1330.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 87.31 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1520.131 ms
+  p99           : 1520.131 ms
+  whisker range : [123.777 - 1520.131] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 7 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 14 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 63.698 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 3270.77 %
+  CPU/Wall eff  : 47.10 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1523.395 ms
+  p99           : 1523.395 ms
+  whisker range : [123.777 - 1523.395] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1680.184 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1490.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 88.68 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1523.395 ms
+  p99           : 1523.395 ms
+  whisker range : [123.777 - 1523.395] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 8 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 16 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 74.752 ms
+
+[CPU Time]
+  User CPU      : 60.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 60.000 ms
+
+[CPU Utilization]
+  CPU util      : 3064.94 %
+  CPU/Wall eff  : 80.26 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1680.184 ms
+  p99           : 1680.184 ms
+  whisker range : [123.777 - 1680.184] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1694.554 ms
+
+[CPU Time]
+  User CPU      : 1480.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1500.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 88.52 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1680.184 ms
+  p99           : 1680.184 ms
+  whisker range : [123.777 - 1680.184] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 9 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 18 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 176.958 ms
+
+[CPU Time]
+  User CPU      : 110.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 140.000 ms
+
+[CPU Utilization]
+  CPU util      : 2878.40 %
+  CPU/Wall eff  : 79.11 %
+
+[Latency Distribution]
+  p50           : 123.777 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [123.777 - 1694.554] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1679.036 ms
+
+[CPU Time]
+  User CPU      : 1430.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1490.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.73 %
+  CPU/Wall eff  : 88.74 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [176.958 - 1694.554] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 10 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 20 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.459 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2743.68 %
+  CPU/Wall eff  : 61.11 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [176.958 - 1694.554] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1655.046 ms
+
+[CPU Time]
+  User CPU      : 1420.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1470.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 88.82 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [176.958 - 1694.554] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 11 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 22 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.342 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2736.09 %
+  CPU/Wall eff  : 62.17 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [176.958 - 1694.554] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2098.576 ms
+
+[CPU Time]
+  User CPU      : 1870.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1900.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 90.54 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 1694.554 ms
+  whisker range : [176.958 - 1694.554] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 12 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 24 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 75.254 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2729.87 %
+  CPU/Wall eff  : 53.15 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 2098.576 ms
+  whisker range : [176.958 - 2098.576] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2293.146 ms
+
+[CPU Time]
+  User CPU      : 2060.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 2100.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 91.58 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 2098.576 ms
+  whisker range : [176.958 - 2098.576] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 13 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 26 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.055 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2710.86 %
+  CPU/Wall eff  : 46.11 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1628.458 ms
+
+[CPU Time]
+  User CPU      : 1380.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1430.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 87.81 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 14 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 28 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.239 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2689.67 %
+  CPU/Wall eff  : 45.98 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1659.013 ms
+
+[CPU Time]
+  User CPU      : 1390.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 87.40 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 15 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 30 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 156.847 ms
+
+[CPU Time]
+  User CPU      : 110.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 120.000 ms
+
+[CPU Utilization]
+  CPU util      : 2686.29 %
+  CPU/Wall eff  : 76.51 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1584.375 ms
+
+[CPU Time]
+  User CPU      : 1340.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1400.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 88.36 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 16 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 32 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.471 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 10.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 15.27 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1484.996 ms
+
+[CPU Time]
+  User CPU      : 1250.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1290.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 86.87 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 17 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 34 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 76.572 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 65.30 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1574.263 ms
+
+[CPU Time]
+  User CPU      : 1340.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1380.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 87.66 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 18 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 36 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.244 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 61.31 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1583.021 ms
+
+[CPU Time]
+  User CPU      : 1370.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1380.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 87.18 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 19 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 38 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.863 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 60.73 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1470.944 ms
+
+[CPU Time]
+  User CPU      : 1260.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1270.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.74 %
+  CPU/Wall eff  : 86.34 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 20 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 40 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.728 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 59.95 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1514.304 ms
+
+[CPU Time]
+  User CPU      : 1280.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1310.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 86.51 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 21 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 42 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.195 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 76.69 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1466.142 ms
+
+[CPU Time]
+  User CPU      : 1240.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1270.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 86.62 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 22 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 44 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.506 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 45.80 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2164.451 ms
+
+[CPU Time]
+  User CPU      : 1920.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1970.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 91.02 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 1694.554 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 23 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 46 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.398 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2685.30 %
+  CPU/Wall eff  : 45.87 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1631.057 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 88.90 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 24 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 48 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.112 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 46.07 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1655.284 ms
+
+[CPU Time]
+  User CPU      : 1370.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1440.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 86.99 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 25 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 50 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.893 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 60.70 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1519.326 ms
+
+[CPU Time]
+  User CPU      : 1310.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1340.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.75 %
+  CPU/Wall eff  : 88.20 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 26 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 52 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 76.677 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 65.21 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1516.164 ms
+
+[CPU Time]
+  User CPU      : 1280.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1340.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 88.38 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 27 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 54 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.280 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 30.64 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1460.037 ms
+
+[CPU Time]
+  User CPU      : 1230.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1260.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 86.30 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 28 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 56 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.659 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 45.69 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1973.778 ms
+
+[CPU Time]
+  User CPU      : 1770.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1800.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 91.20 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 29 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 58 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.398 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2670.38 %
+  CPU/Wall eff  : 46.59 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1456.210 ms
+
+[CPU Time]
+  User CPU      : 1210.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1240.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.76 %
+  CPU/Wall eff  : 85.15 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 30 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 60 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.193 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2660.06 %
+  CPU/Wall eff  : 46.02 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2122.883 ms
+
+[CPU Time]
+  User CPU      : 1880.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1950.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 91.86 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 31 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 62 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.821 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 2660.06 %
+  CPU/Wall eff  : 45.58 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2122.883 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1617.186 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1420.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 87.81 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2122.883 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 32 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 64 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 63.820 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 2647.16 %
+  CPU/Wall eff  : 62.68 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1646.356 ms
+
+[CPU Time]
+  User CPU      : 1390.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 88.07 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 33 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 66 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.135 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 2647.16 %
+  CPU/Wall eff  : 30.24 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 8546.788 ms
+
+[CPU Time]
+  User CPU      : 7720.000 ms
+  Kernel CPU    : 430.000 ms
+  Total CPU     : 8150.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 95.36 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2098.576 ms
+  p99           : 2293.146 ms
+  whisker range : [176.958 - 2293.146] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 34 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 68 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 520.673 ms
+
+[CPU Time]
+  User CPU      : 160.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 200.000 ms
+
+[CPU Utilization]
+  CPU util      : 2647.16 %
+  CPU/Wall eff  : 38.41 %
+
+[Latency Distribution]
+  p50           : 176.958 ms
+  p95           : 2122.883 ms
+  p99           : 2364.618 ms
+  whisker range : [176.958 - 2364.618] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2955.197 ms
+
+[CPU Time]
+  User CPU      : 2530.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 2600.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 87.98 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2364.618 ms
+  whisker range : [520.673 - 2364.618] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 35 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 70 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 376.732 ms
+
+[CPU Time]
+  User CPU      : 60.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 80.000 ms
+
+[CPU Utilization]
+  CPU util      : 34.18 %
+  CPU/Wall eff  : 21.24 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> Mixed workload
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1626.185 ms
+
+[CPU Time]
+  User CPU      : 1390.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1440.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 88.55 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 36 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 72 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.428 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 61.14 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1458.429 ms
+
+[CPU Time]
+  User CPU      : 1230.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1260.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 86.39 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 37 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 74 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.491 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 45.81 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1658.620 ms
+
+[CPU Time]
+  User CPU      : 1420.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1460.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 88.02 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 38 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 76 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.753 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 46.33 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1467.319 ms
+
+[CPU Time]
+  User CPU      : 1250.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 87.23 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 39 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 78 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 76.949 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 60.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 77.97 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1643.940 ms
+
+[CPU Time]
+  User CPU      : 1410.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 88.20 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 40 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 80 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 63.814 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 47.01 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1590.671 ms
+
+[CPU Time]
+  User CPU      : 1360.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1400.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 88.01 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 41 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 82 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 63.496 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 63.00 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1799.349 ms
+
+[CPU Time]
+  User CPU      : 1530.000 ms
+  Kernel CPU    : 80.000 ms
+  Total CPU     : 1610.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 89.48 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 42 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 84 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.993 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 30.31 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1791.007 ms
+
+[CPU Time]
+  User CPU      : 1510.000 ms
+  Kernel CPU    : 90.000 ms
+  Total CPU     : 1600.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 89.34 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 43 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 86 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 63.925 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 62.57 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1675.578 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 88.33 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 44 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 88 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 98.541 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 60.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 60.89 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1645.309 ms
+
+[CPU Time]
+  User CPU      : 1430.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1470.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 89.34 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 45 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 90 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 105.671 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 70.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 66.24 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1471.358 ms
+
+[CPU Time]
+  User CPU      : 1250.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 86.99 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 46 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 92 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.630 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 30.02 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1662.101 ms
+
+[CPU Time]
+  User CPU      : 1430.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.77 %
+  CPU/Wall eff  : 89.04 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 47 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 94 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.871 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 45.54 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1475.398 ms
+
+[CPU Time]
+  User CPU      : 1270.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 86.76 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 48 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 96 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.711 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 59.96 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1688.547 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 87.65 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 49 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 98 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.934 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 45.50 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1730.615 ms
+
+[CPU Time]
+  User CPU      : 1490.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1530.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 88.41 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 50 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 100 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.600 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 10.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 15.24 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1819.584 ms
+
+[CPU Time]
+  User CPU      : 1550.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1610.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 88.48 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 51 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 102 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.261 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 45.97 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2526.156 ms
+
+[CPU Time]
+  User CPU      : 2200.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 2260.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.78 %
+  CPU/Wall eff  : 89.46 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [520.673 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 52 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 104 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 368.845 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 1.90 %
+  CPU/Wall eff  : 13.56 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1663.384 ms
+
+[CPU Time]
+  User CPU      : 1470.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1500.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 90.18 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 53 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 106 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 74.733 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 53.52 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1530.828 ms
+
+[CPU Time]
+  User CPU      : 1300.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1350.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 88.19 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 54 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 108 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.053 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 45.42 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1785.032 ms
+
+[CPU Time]
+  User CPU      : 1500.000 ms
+  Kernel CPU    : 100.000 ms
+  Total CPU     : 1600.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 89.63 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 55 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 110 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.552 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 61.97 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1662.496 ms
+
+[CPU Time]
+  User CPU      : 1450.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 89.02 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 56 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 112 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.460 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 45.83 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2081.278 ms
+
+[CPU Time]
+  User CPU      : 1790.000 ms
+  Kernel CPU    : 80.000 ms
+  Total CPU     : 1870.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 89.85 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 57 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 114 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 58.729 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 68.11 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1685.502 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1500.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 88.99 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 58 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 116 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.283 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 45.26 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1554.737 ms
+
+[CPU Time]
+  User CPU      : 1310.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1350.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 86.83 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 59 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 118 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.180 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 60.44 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1691.336 ms
+
+[CPU Time]
+  User CPU      : 1480.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1510.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 89.28 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 60 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 120 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.005 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 46.15 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1476.201 ms
+
+[CPU Time]
+  User CPU      : 1240.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 86.71 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 61 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 122 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.278 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 45.96 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1784.201 ms
+
+[CPU Time]
+  User CPU      : 1530.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1600.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 89.68 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 62 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 124 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.385 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 45.19 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1641.019 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 88.36 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 63 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 126 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.434 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 30.57 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1794.363 ms
+
+[CPU Time]
+  User CPU      : 1540.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1600.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 89.17 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 64 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 128 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 77.126 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 64.83 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1745.531 ms
+
+[CPU Time]
+  User CPU      : 1530.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1550.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 88.80 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 65 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 130 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.330 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 279.89 %
+  CPU/Wall eff  : 61.23 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1881.612 ms
+
+[CPU Time]
+  User CPU      : 1670.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1680.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.79 %
+  CPU/Wall eff  : 89.29 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 66 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 132 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 77.366 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 99.88 %
+  CPU/Wall eff  : 64.63 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1649.317 ms
+
+[CPU Time]
+  User CPU      : 1450.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 89.73 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 67 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 134 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 77.624 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 99.88 %
+  CPU/Wall eff  : 51.53 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1504.777 ms
+
+[CPU Time]
+  User CPU      : 1300.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1320.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 87.72 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 68 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 136 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 76.900 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 52.02 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1602.383 ms
+
+[CPU Time]
+  User CPU      : 1380.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1400.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 87.37 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 69 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 138 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 70.200 ms
+
+[CPU Time]
+  User CPU      : 10.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 28.49 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1519.645 ms
+
+[CPU Time]
+  User CPU      : 1300.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1320.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 86.86 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 70 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 140 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.420 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 76.43 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1653.027 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1470.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 88.93 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 71 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 142 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 113.866 ms
+
+[CPU Time]
+  User CPU      : 80.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 100.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 87.82 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1676.380 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 80.000 ms
+  Total CPU     : 1480.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 88.29 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 72 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 144 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.884 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 61.65 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1815.087 ms
+
+[CPU Time]
+  User CPU      : 1600.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1650.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 90.90 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 73 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 146 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.281 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 30.64 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1855.554 ms
+
+[CPU Time]
+  User CPU      : 1610.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1670.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 90.00 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 74 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 148 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 118.791 ms
+
+[CPU Time]
+  User CPU      : 90.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 90.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 75.76 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1641.488 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1440.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 87.73 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 75 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 150 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 100.409 ms
+
+[CPU Time]
+  User CPU      : 70.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 70.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 69.71 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2288.830 ms
+
+[CPU Time]
+  User CPU      : 2030.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 2070.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.80 %
+  CPU/Wall eff  : 90.44 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2081.278 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 76 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 152 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.839 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 46.27 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2179.979 ms
+
+[CPU Time]
+  User CPU      : 1930.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1980.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 90.83 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 77 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 154 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.465 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 77.56 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1685.008 ms
+
+[CPU Time]
+  User CPU      : 1420.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1470.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 87.24 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 78 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 156 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.703 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 46.37 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1886.620 ms
+
+[CPU Time]
+  User CPU      : 1630.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1690.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 89.58 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 79 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 158 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.270 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 62.24 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1822.120 ms
+
+[CPU Time]
+  User CPU      : 1580.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1630.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 89.46 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 80 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 160 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 189.410 ms
+
+[CPU Time]
+  User CPU      : 140.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 140.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 73.91 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1684.956 ms
+
+[CPU Time]
+  User CPU      : 1450.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1490.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 88.43 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 81 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 162 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.588 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.74 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1704.556 ms
+
+[CPU Time]
+  User CPU      : 1440.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1510.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 88.59 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2122.883 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 82 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 164 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 83.189 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 36.06 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1537.823 ms
+
+[CPU Time]
+  User CPU      : 1340.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1360.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 88.44 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 83 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 166 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1019.788 ms
+
+[CPU Time]
+  User CPU      : 990.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1010.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 99.04 %
+
+[Latency Distribution]
+  p50           : 520.673 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [520.673 - 2526.156] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 7322.682 ms
+
+[CPU Time]
+  User CPU      : 6320.000 ms
+  Kernel CPU    : 530.000 ms
+  Total CPU     : 6850.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 93.54 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2098.576 ms
+  p99           : 2526.156 ms
+  whisker range : [1019.788 - 2526.156] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 84 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 168 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.946 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.49 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1823.564 ms
+
+[CPU Time]
+  User CPU      : 1320.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1350.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 74.03 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 85 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 170 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.801 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 29.94 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2586.728 ms
+
+[CPU Time]
+  User CPU      : 1990.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 2030.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 78.48 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2122.883 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 86 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 172 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.854 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 60.74 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2110.890 ms
+
+[CPU Time]
+  User CPU      : 1630.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1700.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 80.53 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 87 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 174 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 85.811 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 46.61 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2145.950 ms
+
+[CPU Time]
+  User CPU      : 1600.000 ms
+  Kernel CPU    : 60.000 ms
+  Total CPU     : 1660.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.81 %
+  CPU/Wall eff  : 77.36 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 88 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 176 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 78.124 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 64.00 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1541.051 ms
+
+[CPU Time]
+  User CPU      : 1300.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 1340.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 86.95 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 89 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 178 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.300 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.94 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1649.316 ms
+
+[CPU Time]
+  User CPU      : 1360.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1430.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 86.70 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 90 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 180 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.568 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.07 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1516.314 ms
+
+[CPU Time]
+  User CPU      : 1290.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1300.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 85.73 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 91 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 182 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.557 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.76 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1642.029 ms
+
+[CPU Time]
+  User CPU      : 1400.000 ms
+  Kernel CPU    : 50.000 ms
+  Total CPU     : 1450.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 88.31 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 92 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 184 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.029 ms
+
+[CPU Time]
+  User CPU      : 40.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 78.09 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1470.943 ms
+
+[CPU Time]
+  User CPU      : 1270.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1280.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 87.02 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 93 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 186 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.700 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 44.98 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1651.470 ms
+
+[CPU Time]
+  User CPU      : 1390.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1460.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 88.41 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 94 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 188 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.827 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.57 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2424.875 ms
+
+[CPU Time]
+  User CPU      : 2160.000 ms
+  Kernel CPU    : 40.000 ms
+  Total CPU     : 2200.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 90.73 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 95 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 190 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.256 ms
+
+[CPU Time]
+  User CPU      : 50.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 50.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 76.62 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1751.679 ms
+
+[CPU Time]
+  User CPU      : 1540.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 1550.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 88.49 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 96 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 192 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.058 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 61.48 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1856.798 ms
+
+[CPU Time]
+  User CPU      : 1590.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1660.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 89.40 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 97 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 194 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.669 ms
+
+[CPU Time]
+  User CPU      : 20.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 20.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 30.46 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1702.948 ms
+
+[CPU Time]
+  User CPU      : 1490.000 ms
+  Kernel CPU    : 20.000 ms
+  Total CPU     : 1510.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 88.67 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 98 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 196 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 65.925 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 45.51 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1555.039 ms
+
+[CPU Time]
+  User CPU      : 1290.000 ms
+  Kernel CPU    : 30.000 ms
+  Total CPU     : 1320.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 84.89 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 99 time to execute the command
+CMP command executed successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 198 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 64.302 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 10.000 ms
+  Total CPU     : 40.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 62.21 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 2336.270 ms
+
+[CPU Time]
+  User CPU      : 2010.000 ms
+  Kernel CPU    : 80.000 ms
+  Total CPU     : 2090.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.83 %
+  CPU/Wall eff  : 89.46 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2164.451 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage
+
+====================================================
+Trying for the 100 time to execute the command
+CMP command execution successfully
+
+====================================================
+CMP FULL PERFORMANCE REPORT
+====================================================
+Ring buffer samples: 186 / 1000
+
+----------------------------------------------------
+STAGE: CMD (build + parse)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 66.700 ms
+
+[CPU Time]
+  User CPU      : 30.000 ms
+  Kernel CPU    : 0.000 ms
+  Total CPU     : 30.000 ms
+
+[CPU Utilization]
+  CPU util      : 95.22 %
+  CPU/Wall eff  : 44.98 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> CPU bound stage
+  -> High blocking / waiting detected
+
+
+----------------------------------------------------
+STAGE: IO (SSL + flash)
+----------------------------------------------------
+
+[Wall Time]
+  Total latency : 1651.470 ms
+
+[CPU Time]
+  User CPU      : 1390.000 ms
+  Kernel CPU    : 70.000 ms
+  Total CPU     : 1460.000 ms
+
+[CPU Utilization]
+  CPU util      : 16.82 %
+  CPU/Wall eff  : 88.41 %
+
+[Latency Distribution]
+  p50           : 1019.788 ms
+  p95           : 2145.950 ms
+  p99           : 2955.197 ms
+  whisker range : [1019.788 - 2955.197] ms
+
+[Interpretation]
+  -> IO bound stage

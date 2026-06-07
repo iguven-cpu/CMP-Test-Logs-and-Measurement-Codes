@@ -1,0 +1,136 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+static long get_statm_rss_kb()
+{
+    FILE *f = fopen("/proc/self/statm", "r");
+    if (!f) return -1;
+
+    long size = 0, resident = 0;
+    fscanf(f, "%ld %ld", &size, &resident);
+    fclose(f);
+
+    // page size -> KB
+    long page_kb = sysconf(_SC_PAGESIZE) / 1024;
+    return resident * page_kb;
+}
+
+static void read_status_kb(const char *tag)
+{
+    FILE *f = fopen("/proc/self/status", "r");
+    if (!f) return;
+
+    char line[256];
+
+    while (fgets(line, sizeof(line), f))
+    {
+        if (strncmp(line, "VmRSS:", 6) == 0 ||
+            strncmp(line, "VmSize:", 7) == 0 ||
+            strncmp(line, "VmPeak:", 7) == 0)
+        {
+            printf("[%s][status] %s", tag, line);
+        }
+    }
+
+    fclose(f);
+}
+
+static long read_smaps_rollup_rss()
+{
+    FILE *f = fopen("/proc/self/smaps_rollup", "r");
+    if (!f) return -1;
+
+    char line[256];
+    long rss = -1;
+
+    while (fgets(line, sizeof(line), f))
+    {
+        if (strncmp(line, "Rss:", 4) == 0)
+        {
+            sscanf(line, "Rss: %ld kB", &rss);
+            break;
+        }
+    }
+
+    fclose(f);
+    return rss;
+}
+
+void printMemoryUsage(const char* tag)
+{
+    printf("\n==============================\n");
+    printf("MEMORY SNAPSHOT: %s\n", tag);
+    printf("==============================\n");
+
+    // 1. status (human readable)
+    read_status_kb(tag);
+
+    // 2. statm (fast numeric)
+    long rss_statm = get_statm_rss_kb();
+    if (rss_statm > 0)
+        printf("[%s][statm] RSS: %ld kB\n", tag, rss_statm);
+
+    // 3. smaps_rollup (best accuracy)
+    long rss_smaps = read_smaps_rollup_rss();
+    if (rss_smaps > 0)
+        printf("[%s][smaps_rollup] RSS: %ld kB\n", tag, rss_smaps);
+
+    printf("==============================\n\n");
+}
+
+
+for(int i = 1 ; i < 751 ; i++)
+{
+	printf("Trying for the %d time to execute the command\n", i);
+	cmp_execute();
+	OsixDelay(5, OSIX_SECONDS);
+}
+
+
+cmp_execute()
+{
+
+    printMemoryUsage("before cmpExecuteCommand also before build T0 BASELINE");
+    //
+	//
+	//
+	Build CMP command
+	//
+	//
+	//
+	
+	cmp_main(argc, cmpArgs);
+	printf("CMP command executed successfully\n");
+	printMemoryUsage("after cmpExecuteCommand initialize is finished T3");	
+}
+	
+cmp_main(argc, cmpArgs);
+{	
+	//
+	//
+	// 
+	Parse CMP command and SSL Context Setup
+	//
+	//
+	//		
+
+	
+	printMemoryUsage("after build and parse command T1 ");
+	//
+	//
+	//
+	Network I/O and TLS Handshake
+	//
+	//
+	//
+	
+	printMemoryUsage("after network ssl transactions T2");
+	//
+	//
+	//
+	Certificate Storage to Flash
+	//
+	//
+	//
+}
