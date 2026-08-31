@@ -1,0 +1,8 @@
+2026/08/31 20:55:53 INFO CA ready subject="CN=Test CA" serial=338418303378508346780354025771687866149
+2026/08/31 20:55:53 INFO mockserver listening addr=192.168.7.77:6080 path=/cmp
+2026/08/31 20:57:29 INFO looking up shared secret for MAC-protected request senderKID=msps
+2026/08/31 20:57:29 INFO certificate request received type=IR protection=MAC senderKID=msps
+2026/08/31 20:57:29 INFO issuing certificate type=IR subject="CN=test-genCMPClientDemo,OU=For testing purposes only+OU=IDevID,O=Siemens,C=DE" serial=219107441726147273991359883256744872629
+2026/08/31 20:57:29 INFO including CA certificate in caPubs (IR bootstrap)
+2026/08/31 20:57:29 INFO looking up shared secret for MAC-protected request senderKID=msps
+2026/08/31 20:57:29 INFO certificate confirmation received status=accepted subject="CN=test-genCMPClientDemo,OU=IDevID+OU=For testing purposes only,O=Siemens,C=DE" issueRef=1
