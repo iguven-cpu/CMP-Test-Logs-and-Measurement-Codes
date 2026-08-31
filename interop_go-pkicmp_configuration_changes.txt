@@ -1,0 +1,60 @@
+vboxuser@ubuntu:/opt/go-pkicmp$ git diff -- examples/mockserver/cmd/main.go
+diff --git a/examples/mockserver/cmd/main.go b/examples/mockserver/cmd/main.go
+index 833d6a6..c44fc11 100644
+--- a/examples/mockserver/cmd/main.go
++++ b/examples/mockserver/cmd/main.go
+@@ -20,7 +20,7 @@ func main() {
+        // Key (IAK). In production these would be loaded from a database or a
+        // secrets manager.
+        ca, err := mockserver.New(map[string][]byte{
+-               "my-device": []byte("test-shared-secret"),
++       "msps": []byte("SecretCmp"),
+        }, log)
+        if err != nil {
+                log.Error("creating CA", "error", err)
+@@ -45,6 +45,7 @@ func main() {
+                server.WithExtraCerts([]*x509.Certificate{ca.Cert()}),
+                server.WithSecretLookup(ca),
+                server.WithCertificateLookup(ca),
++               server.WithImplicitConfirm(),
+        )
+ 
+        // Periodically remove stale transactions from clients that never send certConf.
+@@ -57,9 +58,9 @@ func main() {
+        mux := http.NewServeMux()
+        mux.Handle("/cmp", srv)
+ 
+-       log.Info("mockserver listening", "addr", "localhost:8080", "path", "/cmp")
+-       httpSrv := &http.Server{
+-               Addr:         "localhost:8080",
++       log.Info("mockserver listening", "addr", "192.168.7.77:6080", "path", "/cmp")
++       httpSrv := &http.Server{
++        Addr:         "192.168.7.77:6080",
+                Handler:      mux,
+                ReadTimeout:  30 * time.Second,
+                WriteTimeout: 30 * time.Second,
+@@ -69,3 +70,4 @@ func main() {
+                log.Error("server error", "error", err)
+        }
+ }
+ 
+ 
+###################################################################################################################################3
+ 
+ 
+vboxuser@ubuntu:/opt/go-pkicmp$ git diff -- pkicmp/algorithms.go
+diff --git a/pkicmp/algorithms.go b/pkicmp/algorithms.go
+index bbe7061..8cfb82d 100644
+--- a/pkicmp/algorithms.go
++++ b/pkicmp/algorithms.go
+@@ -163,8 +163,8 @@ func ImplicitConfirmInfoValue() InfoTypeAndValue {
+ // info type (RFC 9810 §5.1.1). The duration is encoded as a 32-bit integer
+ // number of seconds (ASN.1 INTEGER).
+ func ConfirmWaitTimeInfoValue(d time.Duration) InfoTypeAndValue {
+-       secs := max(int(d.Seconds()), 0)
+-       val, _ := asn1.Marshal(secs)
++       t := time.Now().Add(d)
++       val, _ := asn1.MarshalWithParams(t, "generalized")
+        return InfoTypeAndValue{
+                InfoType:  oidConfirmWaitTime,
+                InfoValue: val,
