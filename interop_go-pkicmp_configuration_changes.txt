@@ -1,3 +1,6 @@
+
+A) Server configuration (main.go)
+
 vboxuser@ubuntu:/opt/go-pkicmp$ git diff -- examples/mockserver/cmd/main.go
 diff --git a/examples/mockserver/cmd/main.go b/examples/mockserver/cmd/main.go
 index 833d6a6..c44fc11 100644
@@ -39,9 +42,10 @@ index 833d6a6..c44fc11 100644
  }
  
  
-###################################################################################################################################3
+###################################################################################################################################
  
- 
+B) RFC 9810 confirmWaitTime conformance fix (algorithms.go)
+
 vboxuser@ubuntu:/opt/go-pkicmp$ git diff -- pkicmp/algorithms.go
 diff --git a/pkicmp/algorithms.go b/pkicmp/algorithms.go
 index bbe7061..8cfb82d 100644
@@ -58,3 +62,25 @@ index bbe7061..8cfb82d 100644
         return InfoTypeAndValue{
                 InfoType:  oidConfirmWaitTime,
                 InfoValue: val,
+
+###################################################################################################################################
+
+C) FOR HTTPs
+
+vboxuser@ubuntuSyslog:nano /opt/go-pkicmp/examples/mockserver/cmd/main.go
+
+	log.Info("mockserver listening", "addr", "192.168.7.77:6443", "path", "/cmp")
+ 	httpSrv := &http.Server{
+   	 Addr:         "192.168.7.77:6443",
+		Handler:      mux,
+		ReadTimeout:  30 * time.Second,
+		WriteTimeout: 30 * time.Second,
+		IdleTimeout:  120 * time.Second,
+	}
+	if err := httpSrv.ListenAndServeTLS(
+     "/opt/cmp-test/ca/server.crt",
+    "/opt/cmp-test/ca/server.key",
+); err != nil {
+    log.Error("server error", "error", err)
+}
+}
