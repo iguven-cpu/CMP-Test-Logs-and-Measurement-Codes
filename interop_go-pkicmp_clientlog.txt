@@ -1,4 +1,4 @@
-IR (Initialization Request)
+HTTP IR (Initialization Request)
 
 00D01:07:02.493 [cmpOpenSSLLog            :00872] setup_request_ctx:2890->missing -recipient, -srvcert, -issuer, -oldcert or -cert; recipient will be set to "NULL-DN"
 00D01:07:02.495 [cmpOpenSSLLog            :00872] setup_client_ctx:3289->will contact http://192.168.7.77:6080/cmp
@@ -10,7 +10,7 @@ IR (Initialization Request)
 00D01:07:02.679 [cmpOpenSSLLog            :00872] save_free_certs:3336->received 1 enrolled certificate(s), saving to file '/****/****/referenceCert'
 
 
-CR (Certificate Request)
+HTTP CR (Certificate Request)
 
 00D19:35:04.888 [cmpOpenSSLLog            :00872] setup_request_ctx:2890->missing -recipient, -srvcert, -issuer, -oldcert or -cert; recipient will be set to "NULL-DN"
 00D19:35:04.892 [cmpOpenSSLLog            :00872] setup_client_ctx:3289->will contact http://192.168.7.77:6080/cmp
@@ -19,4 +19,28 @@ CR (Certificate Request)
 00D19:35:05.011 [cmpOpenSSLLog            :00872] send_receive_check:180->sending CERTCONF
 00D19:35:05.027 [cmpOpenSSLLog            :00872] send_receive_check:200->received PKICONF
 00D19:35:05.034 [cmpOpenSSLLog            :00872] print_status:4067->received from http://192.168.7.77:6080 PKIStatus: accepted
-00D19:35:05.036 [cmpOpenSSLLog            :00872] save_free_certs:3336->received 1 enrolled certificate(s), saving to file '/mnt/flash/CMPEnrolledCert/enrolledCert'
+00D19:35:05.036 [cmpOpenSSLLog            :00872] save_free_certs:3336->received 1 enrolled certificate(s), saving to file '/****/****/****/enrolledCert'
+
+
+HTTPS IR (Initialization Request)
+
+00D20:00:09.159 [cmpOpenSSLLog            :00872] setup_request_ctx:2890->missing -recipient, -srvcert, -issuer, -oldcert or -cert; recipient will be set to "NULL-DN"
+00D20:00:09.163 [cmpOpenSSLLog            :00872] setup_client_ctx:3289->will contact https://192.168.7.77:6443/cmp
+00D20:00:09.237 [cmpOpenSSLLog            :00872] send_receive_check:180->sending IR
+00D20:00:09.567 [cmpOpenSSLLog            :00872] send_receive_check:200->received IP
+00D20:00:09.578 [cmpOpenSSLLog            :00872] send_receive_check:180->sending CERTCONF
+00D20:00:09.597 [cmpOpenSSLLog            :00872] send_receive_check:200->received PKICONF
+00D20:00:09.602 [cmpOpenSSLLog            :00872] print_status:4067->received from https://192.168.7.77:6443 PKIStatus: accepted
+00D20:00:09.604 [cmpOpenSSLLog            :00872] save_free_certs:3336->received 1 enrolled certificate(s), saving to file '/****/****/****/referenceCert'
+
+
+HTTPS CR (Certificate Request)
+
+00D20:02:53.476 [cmpOpenSSLLog            :00872] setup_request_ctx:2890->missing -recipient, -srvcert, -issuer, -oldcert or -cert; recipient will be set to "NULL-DN"
+00D20:02:53.480 [cmpOpenSSLLog            :00872] setup_client_ctx:3289->will contact https://192.168.7.77:6443/cmp
+00D20:02:53.552 [cmpOpenSSLLog            :00872] send_receive_check:180->sending CR
+00D20:02:53.877 [cmpOpenSSLLog            :00872] send_receive_check:200->received CP
+00D20:02:53.889 [cmpOpenSSLLog            :00872] send_receive_check:180->sending CERTCONF
+00D20:02:53.907 [cmpOpenSSLLog            :00872] send_receive_check:200->received PKICONF
+00D20:02:53.913 [cmpOpenSSLLog            :00872] print_status:4067->received from https://192.168.7.77:6443 PKIStatus: accepted
+00D20:02:53.915 [cmpOpenSSLLog            :00872] save_free_certs:3336->received 1 enrolled certificate(s), saving to file '/****/****/****/enrolledCert'
