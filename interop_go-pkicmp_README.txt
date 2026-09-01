@@ -17,5 +17,6 @@ go mod download
 6) Now you can send client CMP message to the Server like;
 	/msps -cmd ir -server http://192.168.7.77:6080 -path cmp -ref msps -secret pass:SecretCmp -certout /****/****/****/referenceCert 
 	-subject /CN=test-genCMPClientDemo/OU=For testing purposes only/O=Siemens/C=DE/OU=IDevID -newkey /****/****/****/newKeyGenRSA
+7) For HTTPs server.key and server.crt should be created and used. It's configuration change is shown in "interop_go-pkicmp_configuration_changes.txt"
 
 
