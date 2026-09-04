@@ -17,7 +17,7 @@ individually (not as a folder):
 
 ```
 fuzzing_README.md              # this file
-fuzzing_cmp_fuzz.py            # black-box fuzzer for the 7 CMP text parameter fields
+fuzzing_cmp_fuzz.py            # black-box fuzzer for the CMP text parameter fields
 fuzzing_generate_corpus.ps1   # regenerates all 51 malformed credential files
 fuzzing_findings_summary.json # anonymized methodology + results
 ```
@@ -27,7 +27,7 @@ fuzzing_findings_summary.json # anonymized methodology + results
 Two attack surfaces of the web-driven pipeline were fuzzed on a running device,
 using device **liveness (ICMP ping + dashboard/clock) as a crash oracle**:
 
-1. **Text parameter fields (7 fields, ~130 malformed inputs).**
+1. **Text parameter fields (~130 malformed inputs).**
    Requests are issued directly to the firmware's configuration endpoints,
    bypassing the browser-side JavaScript checks so that the firmware's own
    server-side validation is exercised. Payload classes: command-injection
