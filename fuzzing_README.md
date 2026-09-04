@@ -8,8 +8,7 @@ security evaluation of the firmware CMP client's web-driven input pipeline.
 > **Anonymization / responsible disclosure.** All device identifiers (address,
 > hostname, session tokens, vendor/product names) have been removed. No real
 > private key is included; the key corpus is regenerated at run time from a
-> throwaway key. The one defect found (a logging-layer format-string issue,
-> CWE-134) was fixed at the source before release.
+> throwaway key.
 
 ## Contents
 
@@ -44,8 +43,8 @@ using device **liveness (ICMP ping + dashboard/clock) as a crash oracle**:
 
 Across both surfaces, **no input caused a crash, hang, or reboot**. Empirical
 testing corroborated the server-side length bounds and the by-construction
-elimination of shell injection, and surfaced a logging-layer format-string
-defect (CWE-134) that the design-based analysis had missed; the credential-file
+elimination of shell injection, and surfaced no defect across the tested input
+classes; the credential-file
 path proved robust (layered validation, bounded ASN.1 parsing, private-key type
 enforcement, strict PEM-marker matching).
 
