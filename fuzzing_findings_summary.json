@@ -1,0 +1,155 @@
+{
+  "experiment": "Black-box fuzzing of a firmware CMP web-configuration pipeline",
+  "target": "https://<device> (firmware web management interface)",
+  "date": "2026-09-04",
+  "method": "Authenticated same-origin HTTP POST directly to the *.mwp endpoints, bypassing browser-side JavaScript validation to exercise the firmware server-side input validation. Each payload sent with pageMode=bufferwrite (validate) and the field restored to baseline afterwards.",
+  "key_protocol_facts": {
+    "endpoints": ["cmp_server.mwp", "cmp_clientauth.mwp", "cmp_certenroll.mwp"],
+    "field_name_pattern": "Cmp<Page><Field>_1",
+    "confirmed_field_names": {
+      "Address": "CmpServerAddr_1",
+      "Port": "CmpServerPort_1",
+      "CertificatePath": "CmpServerCertPath_1",
+      "RevokePath": "CmpServerRevokePath_1",
+      "Reference": "CmpClientAuthRef_1",
+      "Secret": "CmpClientAuthSecret_1",
+      "Subject": "CmpCertEnrollSubject_1"
+    },
+    "pageMode": "bufferwrite validates and stages the value (server returns resp=OK/ERROR); flush commits the staged buffer. Fuzzing used bufferwrite only, so malformed values were validated but never persisted.",
+    "anti_replay_token": "'_' parameter = session nonce + counter"
+  },
+  "stability": {
+    "total_requests_approx": 130,
+    "device_crashes": 0,
+    "device_reboots": 0,
+    "note": "Recurring HTTP 503 / ERR_INCOMPLETE_CHUNKED_ENCODING observed only under back-to-back sub-500ms submits; eliminated with a >=450 ms inter-request delay. No payload caused a crash or hang."
+  },
+  "findings": {
+    "CRITICAL_format_string_CWE134": {
+      "severity": "high",
+      "where": "trace/dump logging path (shared trace function / CMP_print) shared by all CMP fields",
+      "probe_sent": "AA%x%x%n;reboot`id`../../etc/passwd  (in Certificate Path)",
+      "dumped_argv_path": "AA<leaked-stack-hex>;reboot`id`../../etc/passwd",
+      "observation": "The %x%x%n specifiers were INTERPRETED (%x%x -> stack leak; %n -> memory write), proving a user-controlled field reaches a printf-family FORMAT position in the logging/dump path.",
+      "impact": "Information disclosure (%x/%s leak memory) and memory corruption / potential crash or RCE (%n).",
+      "root_cause": "CMP_print(bio, userValue) — user data passed as the format string.",
+      "fix": "CMP_print(bio, \"%s\", userValue) — enforce a fixed format specifier in the shared trace function; fixes ALL fields at once without touching per-field validation.",
+      "note": "Discovered by empirical fuzzing; NOT captured by the design-based analysis, which correctly ruled out only shell injection."
+    },
+    "path_fields_validation_decision": {
+      "decision": "INTENTIONALLY PERMISSIVE — do NOT add content validation to Certificate Path / Revoke Path.",
+      "rationale": "These are remote-server URL path components (e.g. https://host:port/<path>), not a local filesystem or shell boundary. Traversal/metacharacters are inert literal argv elements. Constraining them would break legitimate server paths without a security benefit."
+    },
+    "strict_fields": {
+      "CmpServerAddr_1": {
+        "validation": "strict domain-name/IP validation",
+        "rejected": ["command injection", "path traversal", "format string", "unicode", "whitespace", "CRLF"],
+        "length_bound": "100 characters ('Domain Name length cannot exceed 100 characters')",
+        "oversize_4096": "HTTP 400 (handled at HTTP layer, not app validation)",
+        "nul_behavior": "C-string truncation: 'A\\x00B' -> 'A', '1.2.3.4\\x00;reboot' -> '1.2.3.4' (post-NUL content DISCARDED, not forwarded -> no injection bypass)"
+      },
+      "CmpServerPort_1": {
+        "validation": "integer-format validation (rejects alpha/hex/float/injection)",
+        "rejected": ["0x1bb", "8080e2", "abcd", "6443.5", "6443;reboot"],
+        "accepted_out_of_range": ["-1", "0", "65536", "99999999999"],
+        "issue": "NO range check: out-of-range port values (<=0, >65535, and 11-digit) are accepted; format is validated but numeric range is not."
+      }
+    },
+    "permissive_fields": {
+      "note": "These fields enforce ONLY a length bound (reject at ~1024, accept 256). Content is NOT semantically filtered: command-injection metacharacters, path-traversal sequences, format-string specifiers, NUL, and unicode are all ACCEPTED at validation time.",
+      "fields": ["CmpServerCertPath_1", "CmpServerRevokePath_1", "CmpClientAuthRef_1", "CmpClientAuthSecret_1", "CmpCertEnrollSubject_1"],
+      "accepted_payloads": ["a;reboot", "$(reboot)", "../../../../etc/passwd", "..\\..\\..\\windows\\win.ini", "%2e%2e%2fetc%2fpasswd", "%s%s%s%s%s", "%n", "A*256", "a\\x00b", "unicode"],
+      "rejected_payloads": ["A*1024 ('Invalid input')"],
+      "exploitability_assessment": "Despite permissive field-level validation, these values are (a) passed via the in-memory argc/argv construction as discrete arguments with NO shell invoked, and (b) used as remote-URL path components / protocol fields, not local filesystem paths. Command injection and local file access are therefore prevented BY CONSTRUCTION, consistent with the paper's core thesis. The format-string specifiers (%s/%n) reaching a later logged CMP transaction warrant a dedicated run-time check."
+    },
+    "credential_file_upload_path": {
+      "target": "CMP private-key upload slot via the web-management Load&Save > HTTP page (endpoint POST /loadandsave_http.mwp?pageMode=action&button=<key-upload-button>&isupload=true, multipart/form-data)",
+      "method": "Uploaded 51 malformed/oversized/wrong-type/injection-laced key files (a PEM text corpus, a binary DER/ASN.1 corpus, a wrong-PEM-object-type corpus, and a PEM-marker-syntax and non-key-file-type corpus) through the same-origin authenticated upload widget (setInputFiles + change event). Read the firmware verdict dialog for each and verified device liveness (dashboard responsive, clock advancing) after every upload. A valid key was used as a positive control.",
+      "corpus_results": {
+        "empty.pem (0 B)": "File validation failed",
+        "onlyheader.pem (54 B, PEM header only)": "File validation failed",
+        "truncated.pem (867 B, PEM cut mid-body)": "File validation failed",
+        "notkey.pem (519 B, valid PEM structure but not a key)": "File validation failed",
+        "nul.pem (2 B, embedded NUL)": "File validation failed",
+        "metachars.pem (84 B, body = %x%x%n;reboot`id`../../etc/passwd)": "File validation failed",
+        "wrongheader.pem (1732 B, corrupted BEGIN marker)": "Data malformed",
+        "corrupted_b64.pem (1732 B, invalid base64 body)": "File load operation failed",
+        "binary.bin (4096 B, random binary)": "File load operation failed",
+        "huge.pem (2.64 MB oversized PEM)": "File load operation failed",
+        "pkcs8_garbage.pem (98 B, PKCS#8 header + garbage body)": "File validation failed",
+        "ec_invalid.pem (100 B, EC key header + invalid body)": "File validation failed",
+        "nested_begin.pem (3109 B, 50x repeated BEGIN/END markers)": "File load operation failed",
+        "encrypted_bad.pem (185 B, DEK-Info encrypted header + undecryptable body)": "File load operation failed",
+        "crlf_inject.pem (114 B, CRLF + fake log lines in body)": "File validation failed",
+        "bom_header.pem (73 B, UTF-8 BOM prefix before PEM header)": "File load operation failed",
+        "nul_scattered.pem (1760 B, valid PEM with NUL bytes scattered mid-body)": "File load operation failed",
+        "fmt_body.pem (1662 B, body = 200x '%n%s%x%p' format-string payload)": "File validation failed",
+        "overlong_line.pem (200 KB, single 200000-char base64 line, no breaks)": "File oversized",
+        "doublekey.pem (3462 B, two valid keys concatenated)": "File was successfully loaded (ACCEPTED)",
+        "der_valid.der (260 B, DER/ASN.1 stub, binary)": "File validation failed",
+        "der_truncated.der (120 B, truncated DER)": "File load operation failed",
+        "der_lenoverflow.der (9 B, ASN.1 SEQUENCE claiming a 4 GB body)": "File load operation failed (no allocation DoS)",
+        "der_deepnest.der (8000 B, 2000-level indefinite-length ASN.1 recursion bomb)": "File load operation failed (no stack overflow)",
+        "cert_in_keyslot.pem (118 B, BEGIN CERTIFICATE in the key slot)": "File load operation failed",
+        "csr_in_keyslot.pem (132 B, BEGIN CERTIFICATE REQUEST in the key slot)": "File validation failed",
+        "trailing_garbage.pem (2250 B, valid key + appended junk after END)": "File load operation failed",
+        "leading_garbage.pem (2249 B, junk before a valid key)": "File load operation failed",
+        "mismatched_markers.pem (1737 B, BEGIN RSA / END EC markers)": "File load operation failed",
+        "utf16.pem (3466 B, UTF-16LE-encoded valid key)": "File load operation failed",
+        "manyblanklines.pem (400 KB, valid header + 400000 blank lines)": "File load operation failed (no DoS)",
+        "pubkey.pem (BEGIN PUBLIC KEY, wrong key class)": "File validation failed",
+        "rsa_pubkey.pem (BEGIN RSA PUBLIC KEY, wrong key class)": "File validation failed",
+        "dsa_key.pem (BEGIN DSA PRIVATE KEY, unexpected algorithm)": "File validation failed",
+        "openssh_key.pem (BEGIN OPENSSH PRIVATE KEY, foreign format)": "File validation failed",
+        "pgp_key.asc (BEGIN PGP PRIVATE KEY BLOCK, foreign ecosystem)": "File load operation failed",
+        "dh_params.pem (BEGIN DH PARAMETERS, non-key object)": "File load operation failed",
+        "whitespace_markers.pem (spaces inside ----- BEGIN ... -----)": "File load operation failed",
+        "lowercase_markers.pem (lowercase begin/end markers)": "File load operation failed",
+        "extra_dashes.pem (8 dashes around markers)": "File load operation failed",
+        "missing_end.pem (BEGIN + body, no END marker)": "File load operation failed",
+        "missing_begin.pem (body + END, no BEGIN marker)": "File load operation failed",
+        "tabs_in_body.pem (tab-indented / trailing-space body)": "File load operation failed",
+        "bad_padding.pem (invalid base64 padding '====')": "File validation failed",
+        "b64_illegalchars.pem (illegal chars @#!*()<>{}[] in body)": "File validation failed",
+        "json_file.json (JSON, not a key)": "File validation failed",
+        "xml_xxe.xml (XML with external-entity XXE payload)": "File load operation failed (no file disclosure)",
+        "shebang.pem (#!/bin/sh; reboot; rm -rf / before a valid key)": "File was successfully loaded (ACCEPTED; preamble skipped, commands inert)",
+        "cert_then_key.pem (certificate object before the private key)": "File load operation failed",
+        "allnull.bin (4096 x 0x00)": "File validation failed",
+        "allff.bin (4096 x 0xFF)": "File load operation failed",
+        "key.pem (valid control)": "File was successfully loaded (accepted); a later re-upload of the identical key returned 'load operation failed' as an expected duplicate/already-present rejection"
+      },
+      "layered_validation_observed": {
+        "File validation failed": "early structural/content pre-check rejects empty, header-only, truncated, non-key, NUL-bearing, CRLF/log-injection, and metacharacter/format-string-laden inputs before any key parse",
+        "Data malformed": "PEM envelope inspected but the BEGIN/END framing is malformed",
+        "File load operation failed": "input passed the framing checks but the key parse/decode (base64/ASN.1), BOM prefix, mid-body NUL, or decrypt step failed",
+        "File oversized": "a dedicated size/line-length guard rejects an over-long single base64 line (200 KB) before parsing"
+      },
+      "notable_behaviors": {
+        "multi_key_pem_accepted": "doublekey.pem (two valid PEM keys concatenated) was ACCEPTED ('File was successfully loaded') -- the parser tolerates a multi-object PEM and uses the first key. This is lenient input handling rather than a vulnerability (both objects are the same valid key), but a defence-in-depth improvement would be to reject or explicitly warn on files containing more than one private key.",
+        "format_string_file_rejected": "fmt_body.pem (pure '%n%s%x%p' body) and metachars.pem were both rejected at validation, confirming the upload path does not forward file content to any printf-family format position (unlike the text config field CWE-134 defect).",
+        "log_injection_rejected": "crlf_inject.pem (embedded CRLF + fake '[CRITICAL] ... reboot now' log lines) was rejected at validation -> no CRLF/log-injection surface via the key file.",
+        "oversize_line_guard": "overlong_line.pem produced a distinct 'File oversized' verdict, showing an explicit size guard separate from the parse path.",
+        "asn1_dos_resistant": "der_lenoverflow.der (SEQUENCE header claiming a 4 GB body) and der_deepnest.der (2000-level indefinite-length ASN.1) were both rejected with 'File load operation failed' and caused no allocation blow-up, stack overflow, or crash -> the DER/ASN.1 parser is length- and depth-bounded.",
+        "wrong_object_type_rejected": "A certificate (BEGIN CERTIFICATE) and a CSR (BEGIN CERTIFICATE REQUEST) placed in the key slot were rejected -> the slot enforces the expected object type.",
+        "trailing_leading_garbage_rejected": "A valid key with junk appended after END, and junk prepended before a valid key, were both rejected ('File load operation failed') -> stricter than the concatenated-two-keys case; trailing/leading data is not silently ignored.",
+        "encoding_rejected": "UTF-16LE-encoded key and a 400000-blank-line file were rejected without DoS -> encoding and line-count are bounded.",
+        "private_key_type_enforced": "Wrong key classes and formats were rejected: PUBLIC KEY, RSA PUBLIC KEY, DSA PRIVATE KEY, OPENSSH PRIVATE KEY (validation failed) and PGP PRIVATE KEY BLOCK, DH PARAMETERS (load failed). The slot enforces an RSA/EC PRIVATE KEY object, not merely 'any PEM'.",
+        "marker_syntax_strict": "PEM-marker syntax variants (spaces inside markers, lowercase begin/end, extra dashes, missing BEGIN, missing END) were all rejected -> strict BEGIN/END marker matching.",
+        "xxe_no_disclosure": "An XML file with an external-entity (XXE) payload was treated as a (failed) key file, not parsed as XML -> no file-disclosure surface via the key upload.",
+        "leading_preamble_skipped": "shebang.pem (a #!/bin/sh; reboot; rm -rf / preamble followed by a valid key) was ACCEPTED: the PEM reader skips non-PEM lines before the BEGIN marker (standard PEM behavior), and the shell commands are inert text that is never executed. This is the same lenient-preamble behavior as the concatenated-key case; a certificate object placed before the key (cert_then_key.pem) was instead rejected. A defence-in-depth improvement would reject files whose content outside the key object is non-trivial."
+      },
+      "stability": "Device stayed fully responsive after all 51 malformed uploads, including the 2.64 MB oversized file, the 200 KB single-line file, the 400 KB blank-line file, the 4 GB-length-claim ASN.1 header, and the 2000-level ASN.1 recursion bomb (no crash, hang, OOM, or reboot; session preserved and clock advancing throughout).",
+      "assessment": "The credential-file (private-key) upload path is ROBUST: across 51 malformed, oversized, binary-DER, wrong-key-type, and injection-laced key files, every input was either rejected gracefully with a distinct, informative verdict (File validation failed / Data malformed / File load operation failed / File oversized) or, for the two cases containing an embedded valid key (concatenated keys and a shell-script preamble), accepted safely -- with no crash in any case. The format-string, shell-metacharacter, CRLF/log-injection, and XXE payloads were rejected or treated as inert, so the path does NOT exhibit the CWE-134 defect of the text fields nor any injection/disclosure surface. The binary DER/ASN.1 parser is length- and depth-bounded (no DoS from a 4 GB length claim or a 2000-level recursion bomb), the slot enforces the expected private-key object type (public keys, DSA/OpenSSH/PGP/DH and certificates/CSRs rejected), and PEM markers are matched strictly. The only lenient behavior is that non-PEM preamble before a valid key object is skipped (standard PEM reader behavior; embedded commands are never executed), for which a defence-in-depth check on extraneous content is suggested."
+    }
+  },
+  "paper_relevant_conclusions": [
+    "Empirical fuzzing found a real format-string vulnerability (CWE-134) in the shared trace/logging path that the design-based analysis missed -- directly demonstrating the value of empirical validation. Shell command injection remains eliminated by the argc/argv construction (metacharacters appear as a literal argument in the dumped invocation); the format-string bug is orthogonal and was fixed in the logger with a fixed format specifier.",
+    "Firmware enforces length bounds server-side (100 chars for Address; ~<1024 for other fields), empirically supporting the MAX_LEN design claim.",
+    "NUL bytes cause C-string truncation with post-NUL content discarded (not forwarded to any parser) -> no NUL-based validation bypass.",
+    "URL-path fields (Certificate Path / Revoke Path) are intentionally permissive: they are remote-server path components, not a local security boundary; the format-string fix protects them without constraining path semantics.",
+    "Minor hardening opportunity: missing numeric RANGE check on Port (format validated, range not).",
+    "The credential-file (private-key) upload path is robust: all 51 malformed/oversized/binary-DER/wrong-key-type/injection-laced key files were handled gracefully (File validation failed / Data malformed / File load operation failed / File oversized), with no crash; the format-string, CRLF/log-injection, and XXE payloads were rejected or treated as inert, so this path is NOT affected by the CWE-134 finding nor any injection/disclosure surface. The DER/ASN.1 parser is length- and depth-bounded (no DoS from a 4 GB length claim or a 2000-level recursion bomb), the slot enforces the private-key object type (public keys, DSA/OpenSSH/PGP/DH, certificates and CSRs all rejected) and matches PEM markers strictly; the only lenient behavior is that non-PEM preamble before a valid key is skipped per standard PEM handling (embedded commands are never executed), for which a defence-in-depth check on extraneous content is suggested.",
+    "No crash, hang, or reboot across ~130 malformed requests -> supports the robustness of the long-lived process and per-transaction state model."
+  ]
+}
